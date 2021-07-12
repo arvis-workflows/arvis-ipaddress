@@ -1,0 +1,36 @@
+{
+  "name": "arvis-ipaddress",
+  "version": "0.0.1",
+  "description": "Arvis workflow to display internal/external IP addresses",
+  "license": "MIT",
+  "repository": "https://github.com/arvis-workflows/arvis-ipaddress",
+  "author": "Steve Agalloco",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "arvis-workflow.json"
+  ],
+  "keywords": [
+    "arvis",
+    "workflow",
+    "arvish"
+  ],
+  "dependencies": {
+    "arvish": ">=0.5.4",
+    "bluebird": "^3.4.7"
+  },
+  "devDependencies": {
+    "ava": "^0.18.0",
+    "xo": "^0.17.0"
+  },
+  "main": "index.js"
+}

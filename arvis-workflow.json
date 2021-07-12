@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "category": "Productivity",
+  "creator": "Steve Agalloco",
+  "description": "Arvis workflow to display internal/external IP addresses",
+  "name": "arvis-ipaddress",
+  "readme": "",
+  "version": "0.0.1",
+  "webAddress": "https://github.com/arvis-workflows/arvis-ipaddress#readme",
+  "enabled": true,
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "command": "ip",
+      "title": "Get IP Address",
+      "subtitle": "",
+      "scriptFilter": "node index.js \"{query}\"",
+      "runningSubtext": "Searching...",
+      "withspace": false,
+      "argType": "no",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "clipboard",
+          "text": "{query}"
+        }
+      ]
+    }
+  ]
+}
